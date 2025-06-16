@@ -144,7 +144,7 @@ export default {
 				const input = {
 					audio: buffer.toString('base64'),
 					task: 'transcribe',
-					vad_filter: 'true',
+					vad_filter: true,
 					language: 'en',
 				};
 
