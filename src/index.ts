@@ -150,6 +150,7 @@ export default {
 
 				try {
 					const result = (await env.AI.run('@cf/openai/whisper-large-v3-turbo', input)) as TranscriptionResponse;
+					console.log('Transcribe resp:', result); // 打印 resp
 					return Response.json(result);
 				} catch (e) {
 					return handleError(e, 'Error during audio transcription');
